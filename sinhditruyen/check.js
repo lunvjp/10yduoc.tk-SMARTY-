@@ -43,6 +43,9 @@ function doMoreQuestion(id) {
         success: function(data) {
             $("#ajax-load").css('display','none');
             $("#choiceuser").html(data);
+        },
+        error: function () {
+            $("#choiceuser").html("FAIL");
         }
     });
 }
@@ -62,6 +65,9 @@ function seeResult(id) { // id = testid
         },success: function(data) {
             $("#ajax-load").css('display','none');
             $("#choiceuser").html(data);
+        },
+        error: function () {
+            $("#choiceuser").html("FAIL");
         }
     });
     $.ajax({
@@ -72,6 +78,9 @@ function seeResult(id) { // id = testid
             type: 'facebook'
         },success: function (data) {
             $("#facebook").html(data);
+        },
+        error: function () {
+            $("#facebook").html("FAIL");
         }
     });
 }
@@ -100,6 +109,9 @@ $(function(){
             success: function(data) {
                 $("#ajax-load").css('display','none');
                 $("#choiceuser").html(data);
+            },
+            error: function () {
+                $("#choiceuser").html("FAIL");
             }
         });
         $.ajax({
@@ -112,6 +124,9 @@ $(function(){
                 countDownDate = data;
                 $("#time").css('display','block');
                 $("#choiceuser").addClass('auto-padding');
+            },
+            error: function () {
+                $("#choiceuser").html("FAIL");
             }
         });
     });

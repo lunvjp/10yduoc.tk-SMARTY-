@@ -41,6 +41,8 @@ function doTest(id) {
             $("#ajax-load").css('display', 'none');
             $("#choiceuser").html(data);
 
+        },error: function () {
+            $("#choiceuser").html("FAIL");
         }
     });
 }
